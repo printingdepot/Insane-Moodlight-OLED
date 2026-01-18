@@ -1,4 +1,4 @@
-![Insane Moodlight V2](insane-moodlight-v2.jpg)
+![Insane Moodlight V2](insane-moodlight-v2.png)
 Insane Moodlight OLED V2.0
 Dieses Projekt ist mein Custom-Stimmungslicht, basierend auf ESPHome. Es ist kein billiger LED-Streifen, sondern eine durchdachte Hardware-Lösung mit Fokus auf Signalqualität, Displayschutz und einer persönlichen Note.
 
@@ -39,5 +39,6 @@ Setup
 secrets.yaml anlegen (WLAN, Keys).
 
 Per ESPHome flashen.
+
 
 In Home Assistant über die neue "Master Toggle" Entität oder die Slider für Helligkeit und Effekte (Love Pulse, Sternenfunkeln) steuern.

@@ -544,12 +544,8 @@ binary_sensor:
           - script.execute: display_timer
       - min_length: 500ms
         max_length: 3000ms 
-        then:
-          - if:
-              condition:
-                lambda: 'return id(passive_light_id).remote_values.is_on() || id(mood_light_id).remote_values.is_on();'
-              then:
-                - button.press: master_toggle_button
+        then: 
+          - button.press: master_toggle_button
 
   # TASTER 2 (D7): Mood Light Steuerung
   - platform: gpio

